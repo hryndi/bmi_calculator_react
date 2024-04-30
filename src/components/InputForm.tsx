@@ -1,10 +1,15 @@
 import styled from "@emotion/styled";
+import Typography from "@mui/material/Typography";
 
 import Slider from "@mui/material/Slider";
 
 const InputWrapp = styled.div`
   max-width: 600px;
   width: 100%;
+`;
+
+const StyledTypography = styled(Typography)`
+  margin-left: 2rem;
 `;
 
 interface InputFormProps {
@@ -22,9 +27,13 @@ const InputForm = ({
 }: InputFormProps) => {
   return (
     <InputWrapp>
+      <StyledTypography variant="h5" fontWeight={700}>
+        Your Weight (kg)
+      </StyledTypography>
       <Slider
         style={{
           margin: "30px",
+          marginTop: "10px",
           maxWidth: "600px",
           width: "-webkit-fill-available",
         }}
@@ -37,9 +46,13 @@ const InputForm = ({
         valueLabelDisplay="auto"
         aria-labelledby="non-linear-slider"
       />
+      <StyledTypography variant="h5" fontWeight={600}>
+        Your Height (cm)
+      </StyledTypography>
       <Slider
         style={{
           margin: "30px",
+          marginTop: "10px",
           maxWidth: "600px",
           width: "-webkit-fill-available",
         }}
